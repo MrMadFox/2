@@ -1,6 +1,8 @@
 from flask import Flask
-a=Flask("first")
+a=Flask(__name__)
 @a.route("/")
 def sai():
     return("praneeth")
 a.run()
+if __name__=="__main__":
+    a.run()
