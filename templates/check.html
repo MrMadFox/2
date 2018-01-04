@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>welcome</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body style="padding: 50px;">
+<div style="text-align: center;border:10px solid black;border-radius: 5px; padding: 50px;">
+
+<div class="input-group" >
+   	<div class="input-group-addon" style="text-align: right;">welcome  {{var[1]}}</div>
+   	<a href="/" ><button type="button" class="btn btn-danger">Logout</button></a>
+   	
+</div>
+{%for i in var[0]:%}
+
+<p>
+	<div class="input-group">
+		<div class="input-group-addon" style="background-color: skyblue; width: 5%; color: white;">{{i[0][:-10]}}</div>
+    	<div class="input-group-addon" style="text-align: left; width:95%;">{{i[1]}}</div>
+	</div>
+<p>
+
+
+{%endfor%}
+<form class="form-inline" method="post" action="check.html">
+  <div class="form-group">
+    <label class="sr-only" for="exampleInputAmount"></label>
+    <div class="input-group">
+      <div class="input-group-addon"><img src="https://image.freepik.com/free-icon/facebook-logo_318-49940.jpg" style="width: 10px;"></div>
+      <input type="text" name="chat" class="form-control" id="exampleInputAmount" placeholder="Text">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+</div>
+
+</body>
+</html>
+
